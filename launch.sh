@@ -4,10 +4,10 @@ set -x
 
 cd /data
 
-if ! [[ -f serverinstall_95_2127 ]]; then
-	rm -fr config defaultconfigs kubejs libraries log4jfix mods resourcepacks minecraft-server-1.18.2.jar version.json start.sh run.* user_jvm_args.txt erverinstall_95_2125
-	mv /serverinstall_95_2127 /data/serverinstall_95_2127
-	./serverinstall_95_2127 -auto
+if ! [[ -f serverinstall_95_2138 ]]; then
+	rm -fr config defaultconfigs kubejs libraries log4jfix mods resourcepacks minecraft-server-1.18.2.jar version.json start.sh run.* user_jvm_args.txt serverinstall_95_2127
+	mv /serverinstall_95_2138 /data/serverinstall_95_2138
+	./serverinstall_95_2138 -auto
 fi
 
 if ! [[ "$EULA" = "false" ]] || grep -i true eula.txt; then

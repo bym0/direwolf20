@@ -2,7 +2,7 @@
 
 FROM openjdk:17-jdk-buster
 
-LABEL version="1.2.0"
+LABEL version="1.4.1"
 
 RUN apt-get update && apt-get install -y curl dos2unix && \
  addgroup minecraft && \
@@ -12,8 +12,8 @@ COPY launch.sh /launch.sh
 RUN dos2unix /launch.sh
 RUN chmod +x /launch.sh
 
-COPY serverinstall_95_2127 /serverinstall_95_2127
-RUN chmod +x /serverinstall_95_2127
+COPY serverinstall_95_2138 /serverinstall_95_2138
+RUN chmod +x /serverinstall_95_2138
 
 USER minecraft
 
@@ -24,7 +24,7 @@ EXPOSE 25565/tcp
 
 CMD ["/launch.sh"]
 
-ENV MOTD "A Minecraft (FTB Presents Direwolf20 1.18 1.2.0) Server Powered by Docker"
+ENV MOTD "A Minecraft (FTB Presents Direwolf20 1.18 1.4.1) Server Powered by Docker"
 ENV LEVEL world
 ENV LEVELTYPE ""
 ENV JVM_OPTS "-Xms2048m -Xmx6144m"
