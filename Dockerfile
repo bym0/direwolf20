@@ -1,4 +1,4 @@
- syntax=docker/dockerfile:1
+#syntax=docker/dockerfile:1
 
 FROM openjdk:17-jdk-buster
 
@@ -12,7 +12,7 @@ COPY launch.sh /launch.sh
 RUN dos2unix /launch.sh
 RUN chmod +x /launch.sh
 
-COPY serverinstall_95_2239 /serverinstall_95_2292
+COPY serverinstall_95_2292 /serverinstall_95_2292
 RUN chmod +x /serverinstall_95_2292
 
 USER minecraft
